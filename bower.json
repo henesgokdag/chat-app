@@ -1,0 +1,13 @@
+{
+  "name": "chat-app",
+  "description": "",
+  "main": "",
+  "authors": [
+    "henesgokdag <henesgokdag@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/henesgokdag/chat-app",
+  "dependencies": {
+    "angular": "^1.7.9"
+  }
+}
