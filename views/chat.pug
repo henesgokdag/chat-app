@@ -44,7 +44,11 @@ block content
              | Hello, can you hear me?
           .bubble.me
              | Are you serious     
-      .write
-        input(type='text')
-        a.write-link.send(href='javascript:;')
+          .write
+            input(type='text')
+            a.write-link.send(href='javascript:;')
+append javascripts 
+  script(src="/socket.io/socket.io.js") 
+  script(src="/javascripts/controller/chatController.js")        
+
     
