@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const passport = require('passport');
 const logger = require('morgan');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -22,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
 
+app.use(passport.initialize());
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
 
