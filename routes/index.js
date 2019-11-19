@@ -8,5 +8,7 @@ router.get('/', function(req, res, next) {
   else 
   res.redirect('/chat');
 });
-
+router.get('/getUser', function(req, res, next) {
+ res.json(req.user);
+});
 module.exports = router;

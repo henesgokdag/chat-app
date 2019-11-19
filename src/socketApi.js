@@ -39,12 +39,13 @@ io.on('connection', socket => {
     console.log(data);
     Messages.upsert({
       ...data,
+      userId: socket.request.user._id,
       username:socket.request.user.name,
       surname: socket.request.user.surname
     });
   });
   socket.on('disconnect',()=>{
-    Users.remove(socket.request.user.googleId);
+    Users.remove(socket.request.user._id);
     Users.list(users=>{
       io.emit('onlineList',users);
     });
